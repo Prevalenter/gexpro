@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DexExcavation: Learning Contact-Aware Dexterous Excavation of Semi-Buried Objects</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/logo.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <div style="display: flex; align-items: center; justify-content: center; flex-wrap: nowrap;">
+            <h1 class="title is-1 publication-title"
+                style="margin: 0; flex: 1; font-size: 2.5rem;">
+              GEX: Democratizing Dexterity with Fully-Actuated Dexterous Hand and Exoskeleton Glove
+            </h1>
+          </div>
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a >Authors</a><sup>1</sup>,</span>
+          </div> -->
+
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Huazhong University of Science and Technology</span>
+          </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. (temporarily hidden) -->
+              <!-- <span class="link-block">
+                <a href="https://academic.oup.com/nsr/advance-article-pdf/doi/10.1093/nsr/nwag351/68501328/nwag351.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link / YouTube. (temporarily hidden) -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=e1vVgf3w1qc"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/orgs/Democratizing-Dexterous/repositories"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://prevalenter.github.io/dexanytwist.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Head figure (temporarily hidden)
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/head.jpg" alt="DexAnyTwist Overview" style="width: 100%; height: auto; border-radius: 10px;">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">DexAnyTwist</span> trains a general policy in simulation that can twist any object.
+      </h2>
+    </div>
+  </div>
+</section>
+-->
+
+
+<!-- Video exhibition carousel (temporarily hidden)
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_screw1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_bulb.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_screwdriver.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_valve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_valve_long.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_screw.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item sim_botton1">
+          <video poster="" id="sim_botton1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_button1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item sim_botton2">
+          <video poster="" id="sim_botton2" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_botton2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item sim_cosm">
+          <video poster="" id="sim_cosm" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_cosm.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            This paper presents GEX, an open-source platform for accessible dexterous manipulation research that integrates a fully actuated robotic hand, a matching wearable interface, and an end-to-end software stack for teleoperation and robot learning. GEX combines GX16, a four-finger anthropomorphic hand with 16 independently actuated degrees of freedom, and EX16, a 16-DoF exoskeleton glove for finger-motion capture and contact-triggered force feedback. Both devices use modular joint units and primarily 3D-printed components, with an estimated parts cost of approximately $600 per device, or $1,200 for the complete hand-glove system. To bridge the different kinematic structures of the glove and the robotic hand, we formulate retargeting in a shared morphology-aligned workspace and train a neural inverse-kinematics model through a differentiable inverse- and forward-kinematics loop. In addition to fingertip-position reconstruction and sparse joint anchors, the proposed method introduces a Jacobian-Cycle regularizer that promotes local consistency in displacement direction, gain, and cross-finger motion. The released software covers communication, low-level control, motion retargeting, data collection, and deployment on physical hardware. We evaluate GEX through real-world manipulation demonstrations, contact-rich teleoperation tasks, imitation learning from human demonstrations, and simulation-to-real reinforcement learning. The experiments demonstrate coordinated multi-finger grasping, in-hand reorientation, twisting, insertion, and stacked-object grasping, establishing GEX as an integrated and reproducible testbed for dexterous teleoperation and robot skill learning.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. (temporarily hidden)
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/e1vVgf3w1qc?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Drawing via Mouse Control with a Dexterous Hand</h2>
+        <div class="columns is-multiline is-centered video-grid">
+          <div class="column is-full"><video autoplay controls muted loop playsinline style="width: 100%;"><source src="./static/videos/ICRA27.mp4" type="video/mp4"></video></div>
+        </div>
+
+        <h2 class="title is-3 has-text-centered">Teleoperation</h2>
+        <div class="columns is-multiline is-centered video-grid equal-height">
+          <div class="column is-half"><video autoplay controls muted loop playsinline><source src="./static/videos/teleop.mp4" type="video/mp4"></video></div>
+          <div class="column is-half"><video autoplay controls muted loop playsinline><source src="./static/videos/mouse.mp4" type="video/mp4"></video></div>
+        </div>
+
+        <h2 class="title is-3 has-text-centered">Regrasping</h2>
+        <div class="columns is-multiline is-centered video-grid">
+          <div class="column is-full"><video autoplay controls muted loop playsinline style="width: 100%;"><source src="./static/videos/regrasp.mp4" type="video/mp4"></video></div>
+        </div>
+
+        <h2 class="title is-3 has-text-centered">Twist and Reorient</h2>
+        <!-- flex-grow on each cell is the clip's aspect ratio (width/height),
+             so the two videos in a row end up the same height. -->
+        <div class="ar-row">
+          <div class="ar-cell has-text-centered" style="flex-grow: 1.048"><p class="video-caption">Simulation</p></div>
+          <div class="ar-cell has-text-centered" style="flex-grow: 1.778"><p class="video-caption">Real</p></div>
+        </div>
+
+        <div class="ar-row">
+          <div class="ar-cell" style="flex-grow: 1.048">
+            <video autoplay controls muted loop playsinline><source src="./static/videos/sim_twist.mp4" type="video/mp4"></video>
+          </div>
+          <div class="ar-cell" style="flex-grow: 1.778">
+            <video autoplay controls muted loop playsinline><source src="./static/videos/real_twist.mp4" type="video/mp4"></video>
+          </div>
+        </div>
+
+        <div class="ar-row">
+          <div class="ar-cell" style="flex-grow: 1.0475">
+            <video autoplay controls muted loop playsinline><source src="./static/videos/sim_reorient.mp4" type="video/mp4"></video>
+          </div>
+          <div class="ar-cell" style="flex-grow: 1.778">
+            <video autoplay controls muted loop playsinline><source src="./static/videos/real_reorient.mp4" type="video/mp4"></video>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+</section>
+
+<!-- BibTeX (temporarily hidden)
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{liu2026dexanytwist,
+  title={DexExcavation: Learning Contact-Aware Dexterous Excavation of Semi-Buried Objects},
+  author={Liu, Xing and Dong, Yunlong and Wan, Jun and Deng, Linan and Hua, Feng and Shen, Yi and Yu, Min and Ma, Guijun and Cheng, Cheng and Song, Haitao and others},
+  journal={National Science Review},
+  pages={nwag351},
+  year={2026},
+  publisher={Oxford University Press}
+}</code></pre>
+  </div>
+</section>
+-->
+
+
+</body>
+</html>
