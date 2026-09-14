@@ -144,18 +144,13 @@
   </div>
 </section>
 
-<!-- Head figure (temporarily hidden)
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/head.jpg" alt="DexAnyTwist Overview" style="width: 100%; height: auto; border-radius: 10px;">
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">DexAnyTwist</span> trains a general policy in simulation that can twist any object.
-      </h2>
+      <img src="./static/images/head.png" alt="GEX Overview" style="width: 100%; height: auto; border-radius: 10px;">
     </div>
   </div>
 </section>
--->
 
 
 <!-- Video exhibition carousel (temporarily hidden)
@@ -232,7 +227,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            This paper presents GEX, an open-source platform for accessible dexterous manipulation research that integrates a fully actuated robotic hand, a matching wearable interface, and an end-to-end software stack for teleoperation and robot learning. GEX combines GX16, a four-finger anthropomorphic hand with 16 independently actuated degrees of freedom, and EX16, a 16-DoF exoskeleton glove for finger-motion capture and contact-triggered force feedback. Both devices use modular joint units and primarily 3D-printed components, with an estimated parts cost of approximately $600 per device, or $1,200 for the complete hand-glove system. To bridge the different kinematic structures of the glove and the robotic hand, we formulate retargeting in a shared morphology-aligned workspace and train a neural inverse-kinematics model through a differentiable inverse- and forward-kinematics loop. In addition to fingertip-position reconstruction and sparse joint anchors, the proposed method introduces a Jacobian-Cycle regularizer that promotes local consistency in displacement direction, gain, and cross-finger motion. The released software covers communication, low-level control, motion retargeting, data collection, and deployment on physical hardware. We evaluate GEX through real-world manipulation demonstrations, contact-rich teleoperation tasks, imitation learning from human demonstrations, and simulation-to-real reinforcement learning. The experiments demonstrate coordinated multi-finger grasping, in-hand reorientation, twisting, insertion, and stacked-object grasping, establishing GEX as an integrated and reproducible testbed for dexterous teleoperation and robot skill learning.
+            Dexterous manipulation is essential for robots to perform contact-rich tasks in the real world, yet low-cost and reproducible platforms that support the complete research workflow remain scarce. This paper presents GEX, an open-source platform for accessible dexterous manipulation research that integrates a fully actuated robotic hand, a matching wearable interface, and an end-to-end software stack for teleoperation and robot learning. GEX combines GX16, a four-finger anthropomorphic hand with 16 independently actuated degrees of freedom, and EX16, a 16-DoF exoskeleton glove for finger-motion capture and contact-triggered force feedback. Both devices use modular joint units and primarily 3D-printed components, with an estimated parts cost below $750 per device and under $1,500 for the complete hand-glove system. To bridge the different kinematic structures of the glove and the robotic hand, we formulate retargeting in a shared morphology-aligned workspace and train a neural inverse-kinematics model through a differentiable inverse- and forward-kinematics loop, where a Jacobian-Cycle regularizer complements fingertip-position and sparse joint-anchor supervision by promoting local consistency in displacement direction, gain, and cross-finger motion. We evaluate GEX through contact-rich teleoperation, imitation learning from human demonstrations, and simulation-to-real reinforcement learning. Teleoperation is assessed on computer-mouse tasks that are especially demanding for a robotic hand, namely scroll-wheel rotation, single-press clicking, transport to a target, and fingertip-to-enveloping regrasping, where the proposed method attains an average success rate of 79% over 20 trials per task, exceeding the strongest retargeting baseline by 10 to 25 percentage points on every task. These results indicate that GEX can serve as an accessible and reproducible testbed for dexterous teleoperation and robot skill learning.
           </p>
         </div>
       </div>
@@ -261,8 +256,8 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered">Drawing via Mouse Control with a Dexterous Hand</h2>
-        <div class="columns is-multiline is-centered video-grid">
-          <div class="column is-full"><video autoplay controls muted loop playsinline style="width: 100%;"><source src="./static/videos/ICRA27.mp4" type="video/mp4"></video></div>
+        <div class="container is-max-desktop">
+          <video autoplay controls muted loop playsinline style="width: 100%;"><source src="./static/videos/ICRA27.mp4" type="video/mp4"></video>
         </div>
 
         <h2 class="title is-3 has-text-centered">Teleoperation</h2>
