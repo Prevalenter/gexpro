@@ -158,6 +158,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="./static/images/head.png" alt="GEX Overview" style="width: 100%; height: auto; border-radius: 10px;">
+      <p class="has-text-grey" style="font-size: 0.9rem; margin-top: 0.5rem; text-align: justify;">Overview of the GEX platform and its precise dexterous teleoperation capability. GEX comprises (a) the GX16 fully actuated dexterous hand with an articulated palm and (b) the EX16 exoskeleton glove. (c) The EX16 glove precisely controls the GX16 hand through a neural retargeting algorithm, enabling the operator to perform challenging real-world mouse-manipulation tasks, including stable grasping, continuous letter writing, and mouse-wheel rotation.</p>
     </div>
   </div>
 </section>
@@ -264,16 +265,29 @@
 
 
     <div class="columns is-centered">
-      <div class="column is-full-width">
+      <div class="column is-full-width video-section">
         <h2 class="title is-3 has-text-centered">Drawing via Mouse Control with a Dexterous Hand</h2>
         <div class="container is-max-desktop">
           <video autoplay controls muted loop playsinline style="width: 100%;"><source src="./static/videos/ICRA27.mp4" type="video/mp4"></video>
         </div>
 
+        <h2 class="title is-3 has-text-centered">Hardware Design</h2>
+        <div class="container is-max-desktop has-text-centered">
+          <img src="./static/images/structure.png" alt="GEX Hardware Structure" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 10px;">
+          <p class="has-text-grey" style="font-size: 0.9rem; margin-top: 0.5rem;">GEX comprises the GX16 fully actuated dexterous hand with an articulated palm and the EX16 exoskeleton glove.</p>
+        </div>
+
         <h2 class="title is-3 has-text-centered">Teleoperation</h2>
-        <div class="columns is-multiline is-centered video-grid equal-height">
-          <div class="column is-half"><video autoplay controls muted loop playsinline><source src="./static/videos/teleop.mp4" type="video/mp4"></video></div>
-          <div class="column is-half"><video autoplay controls muted loop playsinline><source src="./static/videos/mouse.mp4" type="video/mp4"></video></div>
+        <!-- flex-grow on each cell is the clip's aspect ratio (width/height):
+             the row splits in proportion, so both clips end up the same height
+             with no letterboxing and the pair stays centered on the page. -->
+        <div class="ar-row">
+          <div class="ar-cell" style="flex-grow: 1.3333">
+            <video autoplay controls muted loop playsinline><source src="./static/videos/teleop.mp4" type="video/mp4"></video>
+          </div>
+          <div class="ar-cell" style="flex-grow: 1">
+            <video autoplay controls muted loop playsinline><source src="./static/videos/mouse.mp4" type="video/mp4"></video>
+          </div>
         </div>
 
         <h2 class="title is-3 has-text-centered">Regrasping</h2>

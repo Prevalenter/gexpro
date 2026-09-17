@@ -19,7 +19,7 @@ body {
 
 
 .teaser .hero-body {
-  padding-top: 0;
+  padding-top: 4.5rem;
   padding-bottom: 3rem;
 }
 
@@ -164,24 +164,19 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Breathing room above each video group, so a heading is not flush against
+   the clip that precedes it. The first heading keeps the section's own
+   padding instead of stacking another gap on top of it. */
+.video-section .title.is-3 {
+  margin-top: 6rem;
+}
+
+.video-section .title.is-3:first-child {
+  margin-top: 0;
+}
+
 .video-grid > .column {
   padding: 0.15rem;
-}
-
-/* Teleoperation row: both videos render at the same height, keeping each
-   clip's natural aspect ratio. The two clips differ (4:3 vs 1:1), so instead
-   of forcing a shared width we fix a shared height and let the widths fall
-   out naturally. No cropping, no letterboxing — the narrower clip just sits
-   centered in its column. */
-.equal-height > .column {
-  display: flex;
-  justify-content: center;
-}
-
-.equal-height > .column > video {
-  width: auto;
-  max-width: 100%;
-  height: 24rem;
 }
 
 /* Caption above a column of videos, e.g. "Simulation" / "Real". */

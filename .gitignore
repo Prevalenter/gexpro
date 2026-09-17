@@ -220,3 +220,4 @@ __marimo__/
 static/videos_raw
 
 .DS_Store
+static/.DS_Store
