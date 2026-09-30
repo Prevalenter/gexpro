@@ -220,4 +220,9 @@ body {
   .ar-row > .ar-cell {
     width: 100%;
   }
+
+  .ar-row.in-finger-row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
