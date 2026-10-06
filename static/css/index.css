@@ -121,6 +121,18 @@ body {
   border-radius: 10px;
   padding: 0;
   font-size: 0;
+  transform: scale(0.78);
+  transition: transform 350ms ease;
+}
+
+.results-carousel .is-focused .item {
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .results-carousel .item {
+    transition: none;
+  }
 }
 
 .results-carousel video {

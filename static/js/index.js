@@ -32,8 +32,16 @@ $(document).ready(function() {
     var options = {
 			slidesToScroll: 1,
 			slidesToShow: 3,
-			loop: true,
+			centerMode: true,
+			centerPadding: '0px',
+			loop: false,
 			infinite: true,
+			duration: 350,
+			breakpoints: [
+				{ changePoint: 640, slidesToShow: 1, slidesToScroll: 1 },
+				{ changePoint: 768, slidesToShow: 3, slidesToScroll: 1 }
+			],
+			onReady: updateCarouselFocus,
 			autoplay: false,
 			autoplaySpeed: 3000,
     }
@@ -41,12 +49,23 @@ $(document).ready(function() {
 		// Initialize all div with carousel class
     var carousels = bulmaCarousel.attach('.carousel', options);
 
-    // Loop on each carousel initialized
+    // Match infinite-loop clones so wrapping keeps the same focused appearance.
+    function updateCarouselFocus(carousel, index) {
+      var length = carousel.state.length;
+      var active = index === undefined ? carousel.state.index : index;
+      carousel.slides.forEach(function(slide) {
+        var slideIndex = Number(slide.dataset.sliderIndex);
+        slide.classList.toggle('is-focused',
+          ((slideIndex % length) + length) % length === ((active % length) + length) % length);
+      });
+    }
+
     for(var i = 0; i < carousels.length; i++) {
-    	// Add listener to  event
-    	carousels[i].on('before:show', state => {
-    		console.log(state);
-    	});
+      (function(carousel) {
+        carousel.on('before:show', function(state) {
+          updateCarouselFocus(carousel, state.next);
+        });
+      })(carousels[i]);
     }
 
     // Access to bulmaCarousel instance of an element
